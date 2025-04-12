@@ -10,17 +10,10 @@ public class P2839 {
         int n = Integer.parseInt(br.readLine()); // ax+by>=n
         int a = 5;
         int b = 3;
-        int x = n / a;
-        int y = 0;
+        int x = n / a; // a의 갯수
+        int y = 0; // b의 갯수
         for (int i = x; i >= 0; i--) {
-            if(a*i+b*y ==n){ // n이면
-                System.out.println(i);
-                return;
-            } else if ( a*i+b*y > n){ // n보다 크면
-                continue;
-            } else if (a*i+b*y < n) { // n보다 작으면
                 while(true){
-                    y++;
                     if(a*i+b*y==n){ // n이면
                         System.out.println(i+y);
                         return;
@@ -29,8 +22,9 @@ public class P2839 {
                             break;
                         } // n 보다 작으면 루프문 반복
                     }
+                    y++;
                 }
-            }
+            
 
         }
         System.out.println("-1");
