@@ -63,7 +63,7 @@ public class P10108 {
         System.out.println(min);
     }
     private static int compare(char[][] temp) {
-        // TODO Auto-generated method stub
+
         int bw_count = 0;
         int wb_count = 0;
         for(int i=0;i<length;i++){
